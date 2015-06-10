@@ -44,7 +44,7 @@ input.ireg:hover, input.ilog:hover {
     -webkit-transition: box-shadow 0.2s;
 }
 
-a.areg, a.alog, button.blog {
+a.areg, a.alog, button.breg, button.blog {
     display: block;
     background-color: #08c;
     width: 100%;
@@ -61,11 +61,11 @@ a.areg, a.alog, button.blog {
     cursor: pointer;
 }
 
-a.areg:hover, a.alog:hover, button.blog:hover {
+a.areg:hover, a.alog:hover, button.breg:hover, button.blog:hover {
     background-color: #0ae;
     -webkit-transition: background-color 0.5s;
 }
 
-a.areg:active, a.alog:active, button.blog:active {
+a.areg:active, a.alog:active, button.breg:active, button.blog:active {
     background-color: #0bf;
 }
