@@ -1,6 +1,14 @@
-$(document).ready(function() {
-	loginResize();
-	$(window).resize(loginResize);
+$(document).ready(function () {
+    loginResize();
+    $(window).resize(loginResize);
+    $("a.alog").click(function () {
+        var err = false;
+        var u = $("#iusername").val(),
+            p = $("#ipassword").val();
+    });
+    $("form.flog").keypress(function (event) {
+        if (event.which == 13) $("a.alog").click();
+    });
 });
 
 function loginResize() {

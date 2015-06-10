@@ -22,30 +22,37 @@
 <div class="dc">
     <div class="dreg">
         <h2 class="hreg">注册</h2>
-        <form class="freg" method="post" action="">
+        <form class="freg" id="freg" method="post">
             <ul class="ureg">
                 <li class="lreg">
                     <label class="lreg" for="iusername">用户名</label>
                     <input class="ireg" type="text" id="iusername" placeholder="请输入用户名"/>
+                    <span class="sreg-tip" id="stip-username"></span>
                 </li>
                 <li class="lreg">
                     <label class="lreg" for="inickname">昵称</label>
                     <input class="ireg" type="text" id="inickname" placeholder="请输入昵称"/>
+                    <span class="sreg-tip" id="stip-nickname"></span>
                 </li>
                 <li class="lreg">
                     <label class="lreg" for="ipassword">密码</label>
                     <input class="ireg" type="password" id="ipassword" placeholder="密码长度6-20字符"/>
+                    <span class="sreg-tip" id="stip-password"></span>
                 </li>
                 <li class="lreg">
                     <label class="lreg" for="irpassword">确认密码</label>
                     <input class="ireg" type="password" id="irpassword" placeholder="请确认密码"/>
+                    <span class="sreg-tip" id="stip-rpassword"></span>
                 </li>
                 <li class="lreg">
                     <label class="lreg" for="iemail">E-mail</label>
-                    <input class="ireg" type="email" id="iemail" placeholder="请输入常用的电子邮箱"/></li>
+                    <input class="ireg" type="email" id="iemail" placeholder="请输入常用的电子邮箱"/>
+                    <span class="sreg-tip" id="stip-email"></span>
+                </li>
                 <li class="lreg">
                     <label class="lreg" for="itel">手机号码</label>
                     <input class="ireg" type="tel" id="itel" placeholder="请输入手机号码"/>
+                    <span class="sreg-tip" id="stip-tel"></span>
 				</li>
                 <li class="lreg"><a class="areg" href="javascript:;">注册</a></li>
                 <!--<li class="lr"><button type="reset">重置</button></li>-->

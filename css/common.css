@@ -43,6 +43,10 @@ li.lh {
 	float: left;
 }
 
+li#luser {
+    display: none;
+}
+
 a.ah, a.ahr {
 	display: block;
 	background-color: transparent;
@@ -53,7 +57,10 @@ a.ah, a.ahr {
 	text-decoration: none;
 	text-align: center;
 #	border: 1px solid rgba(0,0,0,0.3);
+    transition: background-color 0.5s;
 	-webkit-transition: background-color 0.5s;
+    -moz-transition: background-color 0.5s;
+    -o-transition: background-color 0.5s;
 }
 
 a.ahr {
@@ -62,7 +69,10 @@ a.ahr {
 
 a.ah:hover, a.ahr:hover {
 	background-color: #0ae;
+    transition: background-color 0.5s;
 	-webkit-transition: background-color 0.5s;
+    -moz-transition: background-color 0.5s;
+    -o-transition: background-color 0.5s;
 }
 
 a.ah:active, a.ahr:active {
