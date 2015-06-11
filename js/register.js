@@ -4,11 +4,11 @@ $(document).ready(function () {
     $("a.areg").click(function () {
         var err = false;
         var u = $("#iusername").val(),
-			n = $("#inickname").val(),
-			p = $("#ipassword").val(),
-			r = $("#irpassword").val(),
-			e = $("#iemail").val(),
-			t = $("#itel").val();
+            n = $("#inickname").val(),
+            p = $("#ipassword").val(),
+            r = $("#irpassword").val(),
+            e = $("#iemail").val(),
+            t = $("#itel").val();
 
         err = checkInput(u, n, p, r, e, t);
         if (!err) {
@@ -63,10 +63,31 @@ function doRegister(m, s) {
             var res = new String(data).toLowerCase();
             if (res.search("error") != -1)
                 alert(res);
-            else if (res.search("exist") != -1)
-                $("#stip-username").html("用户名已存在").css("visibility", "visible");
-            else if (res.search("ok") != -1)
+            else if (res.search("exist") != -1) {
+                if (res.search("username") != -1)
+                    $("#stip-username").html("用户名已存在").css("visibility", "visible");
+                else
+                    $("#stip-username").css("visibility", "hidden");
+                if (res.search("email") != -1)
+                    $("#stip-email").html("邮箱已被注册").css("visibility", "visible");
+                else
+                    $("#stip-email").css("visibility", "hidden");
+                if (res.search("tel") != -1)
+                    $("#stip-tel").html("手机已被注册").css("visibility", "visible");
+                else
+                    $("#stip-tel").css("visibility", "hidden");
+            } else if (res.search("ok") != -1) {
+                var cs = res.indexOf("username=") + 9,
+                    ce = res.indexOf(";", cs);
+                if (ce == -1) ce = res.length;
+                setCookie("c_username", res.substring(cs,ce));
+
+                cs = res.indexOf("nickname=") + 9;
+                ce = res.indexOf(";", cs);
+                if (ce == -1) ce = res.length;
+                setCookie("c_nickname", res.substring(cs,ce));
                 location.href = "/";
+            }
         }
     });
 }

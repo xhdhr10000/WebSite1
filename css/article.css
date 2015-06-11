@@ -1,0 +1,27 @@
+body {
+    font-size: 14px;
+}
+
+div.da {
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin: 10px 120px;
+    padding: 10px;
+}
+
+div.tright {
+    float: right;
+    margin: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding: 3px;
+}
+
+a {
+    text-decoration: none;
+    color: #08c;
+}
+
+a:hover {
+    text-decoration: underline;
+}
