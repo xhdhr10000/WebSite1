@@ -1,0 +1,36 @@
+div.dsel-container {
+    margin: 10px 80px;
+    padding: 10px;
+#    border: 1px solid #ccc;
+#    border-radius: 3px;
+}
+
+a.asel {
+    display: block;
+    background-color: transparent;
+    width: 45%;
+    height: 40px;
+    line-height: 40px;
+    color: #08c;
+    text-decoration: none;
+    text-align: center;
+    border: 1px solid rgba(0,0,0,0.3);
+    border-radius: 3px;
+    padding: 0 10px;
+    margin: 5px;
+    -webkit-transition: background-color 0.2s, color 0.2s;
+}
+
+a.asel:hover {
+    background-color: #0be;
+    color: white;
+    -webkit-transition: background-color 0.2s, color 0.2s;
+}
+
+a.asel.left {
+    display: inline-block;
+}
+
+a.asel.right {
+    display: inline-block;
+}

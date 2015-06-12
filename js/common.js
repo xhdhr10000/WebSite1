@@ -1,7 +1,12 @@
 $(document).ready(function() {
     commonResize();
     $(window).resize(commonResize);
-    getCookie("c_nickname");
+    if (getCookie("c_nickname") != null) {
+        $("#auser").html(getCookie("c_nickname"));
+        $("#luser").css("display", "block");
+        $("#llog").css("display", "none");
+        $("#lreg").css("display", "none");
+    }
 });
 
 function commonResize() {
@@ -37,12 +42,7 @@ function setCookie(cname, value, exp) {
 }
 
 function getCookie(cname) {
-    if ($.cookie(cname) != null) {
-        $("#auser").html($.cookie(cname));
-        $("#luser").css("display", "block");
-        $("#llog").css("display", "none");
-        $("#lreg").css("display", "none");
-    }
+    return $.cookie(cname);
     /*
     $.get("/php/cookie.php?l=c_nickname", function (data, status) {
         if (status == "success") {
