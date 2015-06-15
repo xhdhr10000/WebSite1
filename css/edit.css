@@ -1,0 +1,10 @@
+div.de {
+    position: absolute;
+    margin: 10px 150px;
+}
+
+iframe.ifedit {
+    border: none;
+    width: 100%;
+    height: 100%;
+}

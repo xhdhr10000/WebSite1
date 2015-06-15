@@ -1,3 +1,7 @@
+html {
+    overflow-x: hidden;
+}
+
 body {
     font-family: Helvetica, Microsoft Yahei, sans-serif;
     background-color: #f7f7f7;

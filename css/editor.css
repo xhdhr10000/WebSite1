@@ -1,0 +1,81 @@
+.editor-title {
+    margin: 10px 0;
+}
+
+.editor-bar {
+    margin: 10px 0;
+    background-color: white;
+}
+
+.editor-content {
+    background: white;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    margin: 10px 0;
+    padding: 5px;
+}
+
+.editor-keyword {
+    margin: 10px 0;
+}
+
+.editor-submit {
+    margin: 10px 0;
+}
+
+a {
+    text-align: center;
+    text-decoration: none;
+    font-family: Helvetica, Microsoft Yahei, sans-serif;
+}
+
+.a-editor-submit {
+    display: block;
+    background-color: #08c;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    color: white;
+    font-size: 16px;
+    border: 1px solid #888;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.5s;
+    -webkit-transition: background-color 0.5s;
+    -moz-transition: background-color 0.5s;
+    -o-transition: background-color 0.5s;
+}
+
+.a-editor-submit:hover {
+    background-color: #0ae;
+    transition: background-color 0.5s;
+    -webkit-transition: background-color 0.5s;
+    -moz-transition: background-color 0.5s;
+    -o-transition: background-color 0.5s;
+}
+
+.a-editor-submit {
+    background-color: #0bf;
+}
+
+.a-editor-btn {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    font-size: 20px;
+    color: #666;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: Times New Roman;
+}
+
+.a-editor-btn.color {
+    background-color: red;
+}
+
+.d-editor-btn.colorpanel {
+    display: none;
+    position: absolute;
+}

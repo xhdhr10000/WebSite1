@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+    <link rel="stylesheet" type="text/css" href="/css/editor.css"/>
+    <script src="/js/jquery-1.11.3.min.js"></script>
+    <script src="/js/jquery.cookie.js"></script>
+    <script src="/js/editor.js"></script>
+</head>
+
+<body contenteditable="false">
+
+<div class="editor-title">
+    <label class="l-editor-title" for="ititle">标题</label>
+    <input class="i-editor-title" id="ititle" type="text" placeholder="请输入文章标题"></input>
+</div>
+
+<div class="editor-bar">
+    <a class="a-editor-btn bold" id="abold" title="加粗" href="javascript:;"><b>B</b></a>
+    <a class="a-editor-btn italic" id="aitalic" title="斜体" href="javascript:;"><i>I</i></a>
+    <a class="a-editor-btn underline" id="aunderline" title="下划线" href="javascript:;"><u>U</u></a>
+    <a class="a-editor-btn color" id="acolor" title="字体颜色" href="javascript:;">&nbsp;</a>
+    <div class="d-editor-btn colorpanel" id="dcolorpanel">
+        <a class="a-editor-btn colorpanel red" id="acp-red" title="红色" href="javascript:;" style="background-color: red">&nbsp;</a>
+        <a class="a-editor-btn colorpanel blue" id="acp-blue" title="蓝色" href="javascript:;" style="background-color: blue">&nbsp;</a>
+        <a class="a-editor-btn colorpanel blue" id="acp-green" title="绿色" href="javascript:;" style="background-color: green">&nbsp;</a>
+    </div>
+</div>
+
+<div class="editor-content" contenteditable="true">
+</div>
+
+<div class="editor-keyword">
+    <label class="l-editor-keyword" for="ikeyword">关键字</label>
+    <input class="i-editor-keyword" id="ikeyword" type="text" placeholder="请输入文章关键字"></input>
+</div>
+
+<div class="editor-submit">
+    <a class="a-editor-submit" href="javascript:;">保存</a>
+</div>
+
+</body>
+</html>
