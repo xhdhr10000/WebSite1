@@ -1,10 +1,11 @@
-.editor-title {
+.editor-title, .editor-keyword {
     margin: 10px 0;
+    border-bottom: 1px solid #ccc;
+    padding-left: 60px;
 }
 
 .editor-bar {
     margin: 10px 0;
-    background-color: white;
 }
 
 .editor-content {
@@ -12,22 +13,36 @@
     overflow-y: auto;
     border: 1px solid #ddd;
     border-radius: 3px;
+    outline: 0;
     margin: 10px 0;
     padding: 5px;
-}
-
-.editor-keyword {
-    margin: 10px 0;
+    font-family: Helvetica, Microsoft Yahei, sans-serif;
+    font-size: 14px;
 }
 
 .editor-submit {
     margin: 10px 0;
 }
 
+.l-editor-title, .l-editor-keyword {
+    position: absolute;
+    left: 10px;
+    line-height: 35px;
+    font-size: 14px;
+}
+
+.i-editor-title, .i-editor-keyword {
+    border: none;
+    outline: 0;
+    background-color: inherit;
+    line-height: 30px;
+    font-size: 14px;
+    width: 100%;
+}
+
 a {
     text-align: center;
     text-decoration: none;
-    font-family: Helvetica, Microsoft Yahei, sans-serif;
 }
 
 .a-editor-submit {
@@ -66,9 +81,17 @@ a {
     line-height: 20px;
     font-size: 20px;
     color: #666;
-    border: 1px solid #ddd;
+#    border: 1px solid #ddd;
     border-radius: 4px;
     font-family: Times New Roman;
+}
+
+.a-editor-btn:hover {
+    background-color: #ccc;
+}
+
+.a-editor-btn:active {
+    background-color: #ddd;
 }
 
 .a-editor-btn.color {

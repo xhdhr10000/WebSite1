@@ -12,6 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] == "GET" || $_SERVER['REQUEST_METHOD'] == "POST")
 
 function save($con) {
     $user = input_check($_POST['u']);
+    $title = input_check($_POST['t']);
     $art = input_check($_POST['a']);
     $key = input_check($_POST['k']);
 
@@ -23,16 +24,9 @@ function save($con) {
     $uid = $row[0];
     if ($uid == null) die("error: uid is null");
 
-    $sql_insert = "INSERT INTO article (content, owner) ".
-        "VALUES ('".mysql_real_escape_string($art)."', '".$uid."')";
-/*
-    $sql_insert = "CREATE PROCEDURE ArtInsert(in content text, in owner int) BEGIN
-        INSERT INTO article (content, owner) VALUES ('', owner)
-        DECLARE ptr binary(16)
-        SELECT ptr = TEXTPTR(content) WHERE id = identity
-        WRITE TEXT article.content ptr content
-        END";
-*/
+    $sql_insert = "INSERT INTO article (title, content, owner) ".
+        "VALUES ('".mysql_real_escape_string($title)."', '".
+        mysql_real_escape_string($art)."', '".$uid."')";
     if (!mysql_query($sql_insert, $con)) die("error: insert failed: ".mysql_error());
 
     $sql_query = "SELECT id FROM article ORDER BY id DESC LIMIT 1";
@@ -45,13 +39,14 @@ function save($con) {
 }
 
 function load($con, $aid) {
-    $sql_query = "SELECT content FROM article WHERE id='".$aid."'";
+    $sql_query = "SELECT title,content FROM article WHERE id='".$aid."'";
     if (!($ret = mysql_query($sql_query, $con)))
         die("error: get article failed: ".mysql_error());
     $row = mysql_fetch_row($ret);
-    $art = $row[0];
-    if (!$art) die("error: article is null");
-    return output_check($art);
+    $title = $row[0];
+    $art = $row[1];
+    if (!$title || !$art) die("error: article is null");
+    return output_check($title).";&".output_check($art);
 }
 
 function loadlist($con) {

@@ -9,7 +9,7 @@ $(document).ready(function() {
     $("#auser").click(function() {
 //        setCookie("c_username");
 //        setCookie("c_nickname");
-        saveArticle();
+//        saveArticle();
     });
 });
 
@@ -17,8 +17,15 @@ function loadArticle(id) {
     $.get("/php/article.php?f=l&i="+id,
     function (data, status) {
         if (status == "success") {
-            if (data.search("error") != -1) alert(data);
-            else $("#darticle"/*"#dtest"*/).html(decodeURI(data));
+            if (data.search("error: ") != -1) alert(data);
+            else {
+                var cs = data.search(";&");
+                if (cs != -1) {
+                    document.title = decodeURI(data.substring(0, cs));
+                    cs += 2;
+                }
+                $("#darticle").html(decodeURI(data.substring(cs, data.length)));
+            }
         }
     });
 }
