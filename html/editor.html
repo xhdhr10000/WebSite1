@@ -5,6 +5,8 @@
     <link rel="stylesheet" type="text/css" href="/css/editor.css"/>
     <script src="/js/jquery-1.11.3.min.js"></script>
     <script src="/js/jquery.cookie.js"></script>
+    <script src="/ckeditor/ckeditor.js"></script>
+    <script src="/ckeditor/adapters/jquery.js"></script>
     <script src="/js/common.js"></script>
     <script src="/js/editor.js"></script>
 </head>
@@ -21,6 +23,7 @@
     <input class="i-editor-keyword" id="ikeyword" type="text" placeholder="请输入文章关键字"></input>
 </div>
 
+<!--
 <div class="editor-bar">
     <a class="a-editor-btn bold" id="abold" title="加粗" href="javascript:;"><b>B</b></a>
     <a class="a-editor-btn italic" id="aitalic" title="斜体" href="javascript:;"><i>I</i></a>
@@ -28,16 +31,17 @@
     <a class="a-editor-btn color" id="acolor" title="字体颜色" href="javascript:;">&nbsp;</a>
     <div class="d-editor-btn colorpanel" id="dcolorpanel">
         <a class="a-editor-btn colorpanel red" id="acp-red" title="红色" href="javascript:;" style="background-color: red">&nbsp;</a>
+        <span>红色</span>
         <a class="a-editor-btn colorpanel green" id="acp-green" title="绿色" href="javascript:;" style="background-color: green">&nbsp;</a>
         <a class="a-editor-btn colorpanel blue" id="acp-blue" title="蓝色" href="javascript:;" style="background-color: blue">&nbsp;</a>
-        <a class="a-editor-btn colorpanel yellow" id="acp-yellow" title="蓝色" href="javascript:;" style="background-color: yellow">&nbsp;</a>
     </div>
     <a class="a-editor-btn size" id="asize" title="字体大小" href="javascript:;">S</a>
     <a class="a-editor-btn bg" id="abg" title="背景颜色" href="javascript:;">C</a>
 </div>
+-->
 
-<div class="editor-content" id="dcontent" contenteditable="true">
-</div>
+<textarea class="ckeditor editor-content" id="dcontent">
+</textarea>
 
 <div class="editor-submit">
     <a class="a-editor-submit" id="asubmit" href="javascript:;">保存</a>

@@ -101,4 +101,13 @@ a {
 .d-editor-btn.colorpanel {
     display: none;
     position: absolute;
+    background-color: white;
+    border: 1px solid rgba(0,0,0,0.3);
+    border-radius: 3px;
+    padding: 2px;
+}
+
+.a-editor-btn.colorpanel {
+    display: block;
+    margin-bottom: 5px;
 }

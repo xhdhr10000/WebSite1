@@ -7,6 +7,8 @@
     <link rel="stylesheet" type="text/css" href="/css/edit.css"/>
     <script src="/js/jquery-1.11.3.min.js"></script>
     <script src="/js/jquery.cookie.js"></script>
+    <script src="/ckeditor/ckeditor.js"></script>
+    <script src="/ckeditor/adapters/jquery.js"></script>
     <script src="/js/common.js"></script>
     <script src="/js/edit.js"></script>
 </head>
@@ -38,8 +40,21 @@
 </div>
 
 <div class="de">
-    <iframe class="ifedit" src="editor.html">
-    </iframe>
+    <div class="editor-title">
+        <label class="l-editor-title" for="ititle">标&nbsp;&nbsp;&nbsp;&nbsp;题:</label>
+        <input class="i-editor-title" id="ititle" type="text" placeholder="请输入文章标题" name="123"></input>
+    </div>
+
+    <div class="editor-keyword">
+        <label class="l-editor-keyword" for="ikeyword">关键字:</label>
+        <input class="i-editor-keyword" id="ikeyword" type="text" placeholder="请输入文章关键字"></input>
+    </div>
+
+    <textarea class="ckeditor" id="tcontent"></textarea>
+
+    <div class="editor-submit">
+        <a class="a-editor-submit" id="asubmit" href="javascript:;">保存</a>
+    </div>
 </div>
 
 <div class="df">

@@ -1,17 +1,20 @@
 $(document).ready(function() {
-    editorResize();
-    $(window).resize(editorResize);
+    //editorResize();
+    //$(window).resize(editorResize);
+    $("#content").ckeditor();
+    /*
     $(".a-editor-btn.color").click(function() {
         $("#dcolorpanel").slideToggle("fast");
     });
+    $(".a-editor-btn.bold").click(editorBold);
     $(".editor-content").keydown(function(event) {
-        /*
         if (event.keyCode == 9) {
-            $(this).append("&nbsp;&nbsp;&nbsp;&nbsp;");
+            editorBold();
+            //$(this).append("&nbsp;&nbsp;&nbsp;&nbsp;");
             return false;
         }
-        */
     });
+    */
     $("#asubmit").click(submit);
 });
 
@@ -21,13 +24,32 @@ function editorResize() {
         b = $(".editor-bar"),
         k = $(".editor-keyword"),
         s = $(".editor-submit"),
-        cp = $("#dcolorpanel"),
+        bc = $("#acolor"),
+        cp = $(".d-editor-btn.colorpanel"),
         w = $(window);
 
     c.css({
         "height": w.innerHeight()-t.outerHeight()-
             b.outerHeight()-k.outerHeight()-s.outerHeight()-80
     });
+
+    cp.css({
+        "left": bc.position().left
+    });
+}
+
+function editorBold() {
+    var sel = window.getSelection() ? window.getSelection() : document.selection;
+    var pos = sel.focusOffset;
+    var dc = $("#dcontent");
+//    dc.html(dc.html().substring(0, sel.focusOffset)+"&nbsp;&nbsp;&nbsp;&nbsp;"+dc.html().substring(sel.focusOffset, dc.html().length));
+
+    sel = window.getSelection() ? window.getSelection() : document.selection;
+    var range = sel.createRange ? sel.createRange() : sel.getRangeAt(0);
+//    range.setEnd(sel.focusNode, range.endOffset+1);
+    sel.removeAllRanges();
+    sel.addRange(range);
+    dc.focus();
 }
 
 function submit() {
