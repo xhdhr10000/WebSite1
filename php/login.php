@@ -10,7 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     $row = mysql_fetch_row(mysql_query($sql_query, $con));
     $p = $row[0];
 
-    $sql_query = "SELECT username,nickname,password,email,tel FROM user WHERE password='".$p."'";
+    $sql_query = "SELECT username,nickname,password,email,tel,id FROM user WHERE password='".$p."'";
     $ret = mysql_query($sql_query, $con);
     $row = mysql_fetch_row($ret);
     $du = $row[0];
@@ -18,13 +18,14 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     $dp = $row[2];
     $de = $row[3];
     $dt = $row[4];
+    $di = $row[5];
 
     if ($u != $du && $u != $de && $u != $dt || $p != $dp) {
         echo "error";
         return;
     }
 
-    echo "username=".$du.";nickname=".$dn.";";
+    echo "id=".$di.";username=".$du.";nickname=".$dn.";";
 }
 
 mysql_close($con);

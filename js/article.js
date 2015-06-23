@@ -5,12 +5,6 @@ $(document).ready(function() {
     if (ce == -1) ce = location.search.length;
     var id = location.search.substring(cs+3, ce);
     loadArticle(id);
-
-    $("#auser").click(function() {
-//        setCookie("c_username");
-//        setCookie("c_nickname");
-//        saveArticle();
-    });
 });
 
 function loadArticle(id) {

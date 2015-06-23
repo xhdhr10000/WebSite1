@@ -34,7 +34,14 @@ div {
     margin: 0px;
 }
 
-ul.uh, ul.uhr {
+div.d-user-panel {
+    display: none;
+    position: absolute;
+    background-color: #08c;
+    z-index: 2;
+}
+
+ul.uh, ul.uhr, ul.u-user-panel {
     list-style-type: none;
     margin: 0 10px 0 10px;
     padding: 0;
@@ -52,7 +59,7 @@ li#luser {
     display: none;
 }
 
-a.ah, a.ahr {
+a.ah, a.ahr, a.a-user-panel {
     display: block;
     background-color: transparent;
     width: 170px;
@@ -72,7 +79,7 @@ a.ahr {
     width: 70px;
 }
 
-a.ah:hover, a.ahr:hover {
+a.ah:hover, a.ahr:hover, a.a-user-panel:hover {
     background-color: #0ae;
     text-decoration: none;
     transition: background-color 0.5s;
@@ -81,6 +88,6 @@ a.ah:hover, a.ahr:hover {
     -o-transition: background-color 0.5s;
 }
 
-a.ah:active, a.ahr:active {
+a.ah:active, a.ahr:active, a.a-user-panel:active {
     background-color: #0bf;
 }

@@ -53,6 +53,11 @@ function doLogin(s) {
                 ce = res.indexOf(";", cs);
                 if (ce == -1) ce = res.length;
                 setCookie("c_nickname", res.substring(cs,ce));
+
+                cs = res.indexOf("id=") + 3;
+                ce = res.indexOf(";", cs);
+                if (ce == -1) ce = res.length;
+                setCookie("c_userid", res.substring(cs,ce));
                 location.href = "/";
             }
         }

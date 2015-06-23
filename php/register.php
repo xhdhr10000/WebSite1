@@ -41,7 +41,17 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         "VALUES ('".$u."', '".$n."', password('".$p."'), '".$e."', '".$t."')";
     if (!mysql_query($sql_insert, $con)) die("error: insert failed: ".mysql_error());
 
-    echo "username=".$u.";nickname=".$n.";";
+    $sql_query = "SELECT id FROM user WHERE username='".$u."'";
+    $ret = mysql_query($sql_query, $con);
+    $row = mysql_fetch_row($ret);
+    $i = $row[0];
+
+    if (strlen($i) == 0) {
+        echo "error";
+        return;
+    }
+
+    echo "id=".$i.";username=".$u.";nickname=".$n.";";
 }
 
 mysql_close($con);
