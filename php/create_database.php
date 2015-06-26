@@ -8,7 +8,8 @@ $sql_create = "CREATE TABLE user (
     nickname varchar(16),
     password binary(41) NOT NULL,
     email varchar(32),
-    tel varchar(16) )";
+    tel varchar(16),
+    avatar varchar(1024) )";
 if (!mysql_query($sql_create, $con))
     echo "error: create table failed: ".mysql_error()."<br/>";
 
