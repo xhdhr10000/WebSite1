@@ -68,7 +68,6 @@ a.ah, a.ahr, a.a-user-panel {
     color: white;
     text-decoration: none;
     text-align: center;
-#    border: 1px solid rgba(0,0,0,0.3);
     transition: background-color 0.5s;
     -webkit-transition: background-color 0.5s;
     -moz-transition: background-color 0.5s;

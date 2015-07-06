@@ -1,6 +1,4 @@
 div.d-user-container {
-#    border: 1px solid #ccc;
-#    border-radius: 4px;
     margin: 0px 150px;
     padding: 10px;
 }
@@ -55,14 +53,12 @@ ul.u-user-info {
 div.d-change-avatar-container {
     display: none;
     position: absolute;
-    left: 25%;
-    top: 25%;
+    left: 20%;
+    top: 20%;
     z-index: 99;
-    width: 50%;
-    height: 50%;
     border: 1px solid #ccc;
     border-radius: 4px;
-    background: #eee;
+    background: white;
     box-shadow: 2px 2px 3px rgba(0,0,0,0.3);
 }
 
@@ -89,4 +85,70 @@ a.a-ca-close {
 
 a.a-ca-close:hover {
     background-color: #888;
+}
+
+div.d-ca-row {
+    width: 100%;
+}
+
+div.d-ca-editor, div.d-ca-large, div.d-ca-medium, div.d-ca-small {
+    float: left;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    padding: 2px;
+    margin: 5px 15px;
+}
+
+div.d-ca-vdiv {
+    float: left;
+    height: 254px;
+    margin-top: 5px;
+    border-left: 1px solid #ccc;
+}
+
+div.d-clear-after:before, div.d-clear-after:after {
+    display: block;
+    content: ".";
+    clear: both;
+    line-height: 0;
+    visibility: hidden;
+}
+
+img.i-ca {
+    display: block;
+}
+
+a.a-ca-upload, a.a-ca-submit, a.a-ca-cancel {
+    display: inline-block;
+    float: right;
+    width: 60px;
+    height: 24px;
+    line-height: 24px;
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-decoration: none;
+    text-align: center;
+    font-size: 12px;
+    color: #333;
+    margin: 15px;
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+}
+
+a.a-ca-upload {
+    float: left;
+}
+
+a.a-ca-submit {
+    color: #eee;
+    background-color: #48d;
+    border: 1px solid #37c;
+}
+
+a.a-ca-upload:hover, a.a-ca-submit:hover, a.a-ca-cancel:hover {
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+}
+
+a.a-ca-upload:active, a.a-ca-submit:active, a.a-ca-cancel:active {
+    box-shadow: 0px 0px;
 }

@@ -6,13 +6,18 @@ $(document).ready(function() {
         $(".s-change-avatar").toggle();
     });
     $(".a-user-avatar").click(function() {
-        $(".d-change-avatar-container").toggle();
-        $(".d-change-avatar-container").css({
-            "left": "25%",
-            "top": "25%"
+        var w = $(window),
+            d = $(".d-change-avatar-container");
+        d.toggle();
+        d.css({
+            "left": (w.width()-d.width())/2,
+            "top": (w.height()-d.height())/2
         });
     });
     $(".a-ca-close").click(function() {
+        $(".d-change-avatar-container").hide();
+    });
+    $(".a-ca-cancel").click(function() {
         $(".d-change-avatar-container").hide();
     });
     $(".d-ca-title").mousedown(function(e) {
