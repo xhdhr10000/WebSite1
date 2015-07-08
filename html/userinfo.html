@@ -50,7 +50,7 @@
     <div class="d-user-container">
         <div class="d-user-avatar">
             <a class="a-user-avatar" href="javascript:;">
-                <img id="i-info-avatar" src="/res/noface.gif" alt="noface" width="150px" height="150px"/>
+                <img id="i-info-avatar" src="/res/noface.gif" alt="avatar" width="150px" height="150px"/>
                 <p class="s-change-avatar">更换头像</p>
             </a>
         </div>
@@ -83,26 +83,35 @@
         </div>
         <div class="d-ca-row">
             <a class="a-ca-upload" href="javascript:;">上传</a>
+            <form action="/php/userinfo.php?f=ca" method="POST" id="f-upload" name="f-upload" enctype="multipart/form-data" target="if-upload">
+                <input type="text" id="i-ca-uid" name="i-ca-uid" style="display:none"/>
+                <input type="file" name="i-ca-file" class="i-ca-file" style="display:none"/>
+            </form>
         </div>
         <div class="d-ca-row d-clear-after">
             <div class="d-ca-editor">
-                <img class="i-ca" id="i-ca-editor" src="/res/noface.gif" alt="noface" width="250px" height="250px"/>
+                <div class="d-ca-frame">
+                    <div class="d-ca-mag"></div>
+                </div>
+                <img class="i-ca" id="i-ca-editor" src="/res/noface.gif" alt="avatar" width="250px"/>
+                <img class="i-ca" id="i-ca-editor-f" src="/res/noface.gif" alt="avatar" width="250px"/>
             </div>
             <div class="d-ca-vdiv"></div>
             <div class="d-ca-large">
-                <img class="i-ca" id="i-ca-large" src="/res/noface.gif" alt="noface" width="150px" height="150px"/>
+                <img class="i-ca" id="i-ca-large" src="/res/noface.gif" alt="avatar" width="250px"/>
             </div>
             <div class="d-ca-medium">
-                <img class="i-ca" id="i-ca-medium" src="/res/noface.gif" alt="noface" width="80px" height="80px"/>
+                <img class="i-ca" id="i-ca-medium" src="/res/noface.gif" alt="avatar" width="250px"/>
             </div>
             <div class="d-ca-small">
-                <img class="i-ca" id="i-ca-small" src="/res/noface.gif" alt="noface" width="20px" height="20px"/>
+                <img class="i-ca" id="i-ca-small" src="/res/noface.gif" alt="avatar" width="250px"/>
             </div>
         </div>
         <div class="d-ca-row">
             <a class="a-ca-cancel" href="javascript:;">取消</a>
             <a class="a-ca-submit" href="javascript:;">保存</a>
         </div>
+        <iframe id="if-upload" name="if-upload" src="javascript:false" style="display:none"/>
     </div>
 </div>
 

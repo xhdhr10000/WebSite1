@@ -92,11 +92,57 @@ div.d-ca-row {
 }
 
 div.d-ca-editor, div.d-ca-large, div.d-ca-medium, div.d-ca-small {
+    position: relative;
     float: left;
     border: 1px solid #ccc;
     border-radius: 2px;
     padding: 2px;
     margin: 5px 15px;
+    overflow: hidden;
+}
+
+div.d-ca-frame {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    left: 50px;
+    top: 50px;
+    border: 1px solid white;
+    z-index: 2;
+    cursor: move;
+}
+
+div.d-ca-mag {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    right: -1px;
+    bottom: -1px;
+    border: 1px solid white;
+    cursor: nw-resize;
+}
+
+div.d-ca-editor {
+    width: 250px;
+    height: 250px;
+}
+
+div.d-ca-large {
+    width: 150px;
+    height: 150px;
+    padding: 0;
+}
+
+div.d-ca-medium {
+    width: 80px;
+    height: 80px;
+    padding: 0;
+}
+
+div.d-ca-small {
+    width: 20px;
+    height: 20px;
+    padding: 0;
 }
 
 div.d-ca-vdiv {
@@ -116,6 +162,23 @@ div.d-clear-after:before, div.d-clear-after:after {
 
 img.i-ca {
     display: block;
+}
+
+img#i-ca-editor {
+    position: absolute;
+    opacity: 0.5;
+}
+
+img#i-ca-editor-f {
+    position: absolute;
+    opacity: 1;
+    clip: rect(50px, 200px, 200px, 50px);
+}
+
+img#i-ca-large, img#i-ca-medium, img#i-ca-small {
+    position: relative;
+    top: -50px;
+    left: -50px;
 }
 
 a.a-ca-upload, a.a-ca-submit, a.a-ca-cancel {

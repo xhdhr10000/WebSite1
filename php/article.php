@@ -65,4 +65,6 @@ function output_check($str) {
     $str = stripcslashes($str);
     return $str;
 }
+
+mysql_close($con);
 ?>

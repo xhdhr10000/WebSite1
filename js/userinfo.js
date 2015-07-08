@@ -43,6 +43,33 @@ $(document).ready(function() {
             return false;
         }
     });
+
+    $(".a-ca-upload").click(function() {
+        $(".i-ca-file").click();
+    });
+    $("#f-upload").submit(function() {
+    });
+    $(".i-ca-file").change(function() {
+        if ($(this).val().length != 0)
+            $("#f-upload").submit();
+    });
+    $("#if-upload").load(function() {
+        var win = document.getElementById("if-upload").contentWindow,
+            result = win.document.body.innerText;
+        if (result.search("error") != -1)
+            alert(result);
+        else {
+            $(".i-ca").attr("src", result);
+        }
+    });
+    $("#i-ca-editor").load(function() {
+        if ($(this).height() != 0)
+            $(this).css("top", (250-$(this).height())/2);
+    });
+    $("#i-ca-editor-f").load(function() {
+        if ($(this).height() != 0)
+            $(this).css("top", (250-$(this).height())/2);
+    });
 });
 
 function parseServerData(data, keyword) {
@@ -62,7 +89,9 @@ function loadUserInfo() {
     username = getCookie("c_username");
     nickname = getCookie("c_nickname");
 
-    $.get("/php/userinfo.php?id="+id,
+    $("#i-ca-uid").val(id);
+
+    $.get("/php/userinfo.php?f=lu&id="+id,
     function (data, status) {
         if (status == "success") {
             if (data.search("error") != -1) alert(data);
