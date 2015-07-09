@@ -120,6 +120,7 @@ div.d-ca-mag {
     bottom: -1px;
     border: 1px solid white;
     cursor: nw-resize;
+    z-index: 3;
 }
 
 div.d-ca-editor {
