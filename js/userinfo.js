@@ -42,23 +42,48 @@ $(document).ready(function() {
             switch(op) {
             case "mca":
                 c = $(".d-change-avatar-container");
+                d = $(".dc");
+                l = cax + e.pageX - mx;
+                t = cay + e.pageY - my;
+                if (cax + e.pageX - mx <= 0) l = 0;
+                if (cax + e.pageX - mx + c.width() > d.width())
+                    l = d.width() - c.width();
+                if (cay + e.pageY - my <= 0) t = 0;
+                if (cay + e.pageY - my + c.height() > d.height())
+                    t = d.height() - c.height();
                 c.css({
-                    "left": cax + e.pageX - mx,
-                    "top": cay + e.pageY - my
+                    "left": l,
+                    "top": t
                 });
                 break;
             case "mcaf":
                 c = $(".d-ca-frame");
+                d = $(".d-ca-editor");
+                l = cax + e.pageX - mx;
+                t = cay + e.pageY - my;
+                if (cax + e.pageX - mx <= 0) l = 0;
+                if (cax + e.pageX - mx + c.width() > d.width())
+                    l = d.width() - c.width();
+                if (cay + e.pageY - my <= 0) t = 0;
+                if (cay + e.pageY - my + c.height() > d.height())
+                    t = d.height() - c.height();
                 c.css({
-                    "left": cax + e.pageX - mx,
-                    "top": cay + e.pageY - my
+                    "left": l,
+                    "top": t
                 });
                 break;
             case "rscaf":
                 c = $(".d-ca-frame");
+                d = $(".d-ca-editor");
+                m = $(".d-ca-mag");
+                if (cw + cax + e.pageX - mx <= m.width() ||
+                    cw + cax + e.pageX - mx + c.position().left > d.width() ||
+                    ch + cay + e.pageX - mx < m.height() ||
+                    ch + cay + e.pageX - mx + c.position().top >= d.height())
+                        break;
                 c.css({
                     "width": cw + cax + e.pageX - mx,
-                    "height": ch + cay + e.pageY - my
+                    "height": ch + cay + e.pageX - mx
                 });
                 break;
             }
